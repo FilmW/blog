@@ -1,0 +1,20 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 2rem;
+}
+
+nav {
+    display: flex;
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+svg, img, picture {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
