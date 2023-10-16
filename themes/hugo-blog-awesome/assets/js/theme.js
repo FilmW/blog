@@ -14,22 +14,10 @@
         const lsState = localStorage.getItem(LS_THEME_KEY);
         if (lsState) return lsState;
 
-        let state;
-        switch (config) {
-            case THEMES.DARK:
-                state = THEMES.DARK;
-                break;
-            case THEMES.LIGHT:
-                state = THEMES.LIGHT;
-                break;
-            case THEMES.AUTO:
-            default:
-                state = window.matchMedia("(prefers-color-scheme: dark)")
+        const state = window.matchMedia("(prefers-color-scheme: dark)")
                     .matches
                     ? THEMES.DARK
                     : THEMES.LIGHT;
-                break;
-        }
         return state;
     };
 
@@ -61,7 +49,7 @@
         // Theme switch
         const lamp = document.getElementById("mode");
 
-        lamp.addEventListener("click", () => toggleTheme());
+        //lamp.addEventListener("click", () => toggleTheme());
 
         // Blur the content when the menu is open
         const cbox = document.getElementById("menu-trigger");
