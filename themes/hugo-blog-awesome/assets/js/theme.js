@@ -7,44 +7,6 @@
         AUTO: "auto",
     };
 
-    const body = document.body;
-    const config = body.getAttribute("data-theme");
-
-    const getThemeState = () => {
-        const lsState = localStorage.getItem(LS_THEME_KEY);
-        if (lsState) return lsState;
-
-        const state = window.matchMedia("(prefers-color-scheme: dark)")
-                    .matches
-                    ? THEMES.DARK
-                    : THEMES.LIGHT;
-        return state;
-    };
-
-    const initTheme = (state) => {
-        if (state === THEMES.DARK) {
-            document.documentElement.classList.add(THEMES.DARK);
-            document.documentElement.classList.remove(THEMES.LIGHT);
-        } else if (state === THEMES.LIGHT) {
-            document.documentElement.classList.remove(THEMES.DARK);
-            document.documentElement.classList.add(THEMES.LIGHT);
-        }
-    };
-
-    // init theme ASAP, then do the rest.
-    initTheme(getThemeState());
-    requestAnimationFrame(() => body.classList.remove("notransition"))
-    const toggleTheme = () => {
-        const state = getThemeState();
-        if (state === THEMES.DARK) {
-            localStorage.setItem(LS_THEME_KEY, THEMES.LIGHT);
-            initTheme(THEMES.LIGHT);
-        } else if (state === THEMES.LIGHT) {
-            localStorage.setItem(LS_THEME_KEY, THEMES.DARK);
-            initTheme(THEMES.DARK);
-        }
-    };
-
     window.addEventListener("DOMContentLoaded", () => {
         // Theme switch
         const lamp = document.getElementById("mode");

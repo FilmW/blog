@@ -11,7 +11,7 @@
   h4,
   h5,
   h6 {
-    color: $dark-white;
+    color: $dark-white !important;
   }
 
   // Table
@@ -276,11 +276,7 @@
 // support JS disabled environment with media query
 @media (prefers-color-scheme: dark) {
   // use "light" class to avoid style conflicts in js enabled environment
-  html:not(.light) {
-    @include dark-mode()
+  html {
+    @include dark-mode();
   }
-}
-
-html.dark {
-  @include dark-mode()
 }

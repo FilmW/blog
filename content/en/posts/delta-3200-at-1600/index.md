@@ -5,7 +5,6 @@ author: Oliver
 description: ILFORD Delta 3200 is an ISO 1000 film. However, it can be shot at ISO 1600 without any problems.
 ---
 
-## This film is AWESOME
 ILFORD's Delta 3200 is an extremely sensitive film. While it's one of the grainiest films I've ever shot, it has a really lovely character, producing aesthetically pleasing images reminiscent of the pre-WW2 era.
 
 Delta 3200 being an <abbr title="International Organization for Standardization">ISO</abbr> 1000 film is an open secret by now[^1]. I decided to meter it for ISO 1600 this time.
@@ -27,3 +26,4 @@ Delta 3200 is an awesome film. Thanks to the higher sensitivity, it is really a 
 [^1]: ILFORD Delta 3200 Professional [Technical Information](https://www.ilfordphoto.com/amfile/file/download/file/1913/product/682/) November 2018
 
 
+Author: Oliver
